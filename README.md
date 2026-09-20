@@ -12,6 +12,28 @@ Stock DSH has no power control in the Settings page. This plugin is fully self-c
 - The full-screen overlay and the auto-reload-after-restart behavior mirror the built-in settings shell.
 - If the host build already carries a power action under the reserved id `system-power` (e.g. a locally patched DSH), this plugin yields to it and does **not** add a duplicate button.
 
+## Screenshots
+
+The power button appears in the Settings header, right next to **Open config file**:
+
+![Settings header with the power button](assets/settings-header.png)
+
+Clicking it opens the **Shutdown / Restart** menu:
+
+![Power menu](assets/power-menu.png)
+
+Firing an action raises a full-screen overlay:
+
+![Shutting down overlay](assets/shutting-down.png)
+
+Once the host has exited, the overlay settles on a static message:
+
+![Closed notice](assets/closed.png)
+
+Restart shows its own notice and reloads the page as soon as the new process answers:
+
+![Restarting overlay](assets/restarting.png)
+
 ## Install
 
 Install from the package directory or a packed tarball:

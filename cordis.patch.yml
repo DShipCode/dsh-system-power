@@ -1,0 +1,14 @@
+# dsh-system-power bundle patch: registers the System Power plugin row.
+#
+# The row name is the package name. The node half (lib/index.js) is the Host
+# Loader entry and provides the `systemPower` Remote namespace; the browser
+# half resolves through the package's `dsh.client` manifest and its `./client`
+# export, which the client-modules scan serves as /plugins/dsh-system-power/client.js.
+#
+# The row is deliberately inserted after the web-app bundle's rows (profiles
+# list bundles in order), so it contributes the Settings-header power button
+# without touching any built-in row.
+
+- insert:
+    - id: system-power
+      name: dsh-system-power
